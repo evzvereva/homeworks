@@ -16,8 +16,6 @@ def index(request):
     click = request.GET.get('from-landing')
     if click:
         counter_click.update({click})
-        # print(click)
-    # print(sum(counter_click.values()))
 
     return render(request, 'index.html')
 
@@ -28,13 +26,10 @@ def landing(request):
     # который может принимать значения original и test
     # Так же реализуйте логику подсчета количества показов
     show = request.GET.get('ab-test-arg')
-    # print(show)
     counter_show.update({show})
     if show == 'original':
-        # print(sum(counter_show.values()))
         return render(request, 'landing.html')
     elif show == 'test':
-        # print(sum(counter_show.values()))
         return render(request, 'landing_alternate.html')
     else:
         return render(request, 'index.html')
