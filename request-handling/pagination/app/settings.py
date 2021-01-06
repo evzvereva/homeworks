@@ -84,3 +84,5 @@ try:
     from .settings_local import *
 except ImportError:
     pass
+
+ITEMS_PAGE = 15
