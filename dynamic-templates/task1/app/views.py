@@ -17,7 +17,6 @@ def inflation_view(request):
         file_reader = csv.DictReader(csvfile, delimiter=";")
         list_dict = list(file_reader)
         context['table'] = list_dict
-    print(context)
 
     return render(request, template_name,
                   context)
