@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Телефон{% endblock %}
+{% block title %}{{ ph.name }}{% endblock %}
 {% block content %}
     <div class="container">
         <div class="header">
-            <h1>Телефон</h1>
+            <h1>{{ ph.name }}</h1>
         </div>
         <div class="content">
-
+                <div class="price">Стоимость: {{ ph.price }}</div>
+                <img src="{{ ph.image }}">
+                <div>Дата выпуска: {{ ph.release_date }}</div>
         </div>
     </div>
 {% endblock %}
