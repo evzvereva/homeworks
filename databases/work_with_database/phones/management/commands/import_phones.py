@@ -16,5 +16,5 @@ class Command(BaseCommand):
 
             for line in phone_reader:
                 # TODO: Добавьте сохранение модели
-                new_phone = Phone(id=line[0], name=line[1], price=line[2], image=line[3], release_date=line[4], lte_exists=line[5])
+                new_phone = Phone(id=line[0], name=line[1], image=line[2], price=line[3], release_date=line[4], lte_exists=line[5])
                 new_phone.save()

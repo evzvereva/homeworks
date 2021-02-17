@@ -1,16 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}{{ ph.name }}{% endblock %}
+{% block title %}{{ phone.name }}{% endblock %}
 {% block content %}
     <div class="container">
         <div class="header">
-            <h1>{{ ph.name }}</h1>
+            <h5><a href="/catalog">Вернуться в каталог</a></h5>
+            <h1>{{ phone.name }}</h1>
         </div>
         <div class="content">
-                <div class="price">Стоимость: {{ ph.price }}</div>
-                <img src="{{ ph.image }}">
-                <div>Дата выпуска: {{ ph.release_date }}</div>
+            <div>Стоимость: {{ phone.name }}</div>
+            <img src="{{ phone.image }}">
+            <div>Дата выпуска: {{ phone.release_date }}</div>
+            <div>LTE:
+                {% if phone.lte_exists %}
+                    Есть
+                {% else %}
+                    -
+                {% endif %}
         </div>
     </div>
 {% endblock %}
